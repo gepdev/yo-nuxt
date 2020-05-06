@@ -1,0 +1,27 @@
+{
+  "name": "generator-nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt Yeoman Generator",
+  "main": " ",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gepdev/generator-nuxt.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Gentian Polovina",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/gepdev/generator-nuxt/issues"
+  },
+  "homepage": "https://github.com/gepdev/generator-nuxt#readme",
+  "dependencies": {
+    "yeoman-generator": "^4.10.0"
+  }
+}
