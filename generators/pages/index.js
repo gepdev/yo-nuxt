@@ -32,7 +32,7 @@ module.exports = class extends Generator {
       const file = segments[0].match(rgxFileExt)
       if (file) {
         const filename = segments[0].split('.')[0]
-        this.fs.copyTpl(this.templatePath("page.vue"), this.destinationPath(`pages/${this.prompts.path}/${segments[0]}`), { ComponentName: filename })
+        this.fs.copyTpl(this.templatePath("page.vue"), this.destinationPath(`pages/${this.prompts.path}/${segments[0]}`), { ComponentName: this._capitalizeString(filename) })
       } else {
         this._createPageWithFolder(segments[0])
       }
@@ -42,6 +42,9 @@ module.exports = class extends Generator {
     const _isFirst = path === ""
     const _pagePath = _isFirst ? pagename : `${path}`
     this.fs.copyTpl(this.templatePath("parent.vue"), this.destinationPath(`pages/${this.prompts.path}/${_pagePath}.vue`))
-    this.fs.copyTpl(this.templatePath("children.vue"), this.destinationPath(`pages/${this.prompts.path}/${_pagePath}/index.vue`), { ComponentName: pagename })
+    this.fs.copyTpl(this.templatePath("children.vue"), this.destinationPath(`pages/${this.prompts.path}/${_pagePath}/index.vue`), { ComponentName: this._capitalizeString(pagename) })
+  }
+  _capitalizeString(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1, string.length)
   }
 }
