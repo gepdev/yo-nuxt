@@ -30,7 +30,7 @@ yarn link "generator-nuxt"
 ## Pages Generator
 This commands help you scaffold Nuxt pages
 ```bash
-yo nuxt:pages
+$ yo nuxt:pages
 ```
 ```bash
 ? Insert page path relative to the project including children pages
@@ -49,6 +49,6 @@ Now insert the structure of the pages to create (see examples below)
 ? Insert page path relative to the project including children pages mypage.vue
 ```
 Now insert the folder name inside /pages where to save the pages
-```
+```bash
 ? Target path where the pages will be written myfolder
 ```
